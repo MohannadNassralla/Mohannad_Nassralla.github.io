@@ -2,11 +2,11 @@
 layout: default
 ---
 
-# Your Name
+# Mohannad Nassralla
 
 ## About
 
-I am a recent graduate in [Computer Science / Electrical Engineering] from [University Name] in Jordan. I am building expertise in applied AI and ML systems through the AI.SPIRE program. I am most interested in [your areas of interest — e.g., NLP, computer vision, data engineering, deployment].
+I am a graduate in softwear Enginnering  from Al Hussin Bin Talal in Jordan. I am building expertise in applied AI and ML systems through the AI.SPIRE program. I am most interested in data analysis and  data engineering
 
 ---
 
@@ -14,36 +14,26 @@ I am a recent graduate in [Computer Science / Electrical Engineering] from [Univ
 
 ### Foundations
 
-**Git, Environment Setup & Collaboration**
-
-- **Environment & Git Workflows** — Set up a reproducible Python development environment and practiced branching, merging, and pull request workflows.
-  - Repo: [your-repo-link](#)
-  - Skills: Git, GitHub, VS Code, virtual environments, branch management
-
-- **Team Collaboration Pipeline** — Collaborated on a shared repository using feature branches and code review, resolving merge conflicts and maintaining a clean commit history.
-  - Repo: [your-repo-link](#)
-  - Skills: Git collaboration, pull requests, code review, merge conflict resolution
-
 **Data Pipelines & PyTorch Fundamentals**
 
 - **Data Pipeline** — Built an end-to-end data loading and preprocessing pipeline using pandas, with validation checks and reproducible outputs.
-  - Repo: [your-repo-link](#)
+  - Repo: [https://github.com/LevelUp-Applied-AI/m2-l2-data-pipeline-MohannadNassralla/pull/1](#)
   - Skills: Python, pandas, data cleaning, pipeline design
 
 - **PyTorch Model** — Implemented a neural network training loop in PyTorch, including data loading, forward/backward passes, and evaluation metrics.
-  - Repo: [your-repo-link](#)
+  - Repo: [https://github.com/LevelUp-Applied-AI/m2-i2-pytorch-MohannadNassralla/pull/1](#)
   - Skills: PyTorch, tensor operations, training loops, model evaluation
 
 **Relational Databases & SQL**
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
+- **Levant Tech Analytics: Relational Database Design & KPI Business Intelligence** — Architected a PostgreSQL analytics suite for a Jordanian tech firm, implementing complex JOINS, Window Functions, and CTEs to extract workforce insights and designing a scalable schema for certification tracking.
+  - Repo: [https://github.com/LevelUp-Applied-AI/m3-l3-sql-analytics-MohannadNassralla/pull/1](#)
   - Skills: SQL, PostgreSQL, data modeling
 
 **Data Visualization & Communication**
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
+- **Academic Performance Analytics** —Performed a comprehensive exploratory data analysis (EDA) on 2,000 university records using Python, utilizing statistical hypothesis testing (T-tests, Chi-square) and data visualization to identify key drivers of student success
+  - Repo: [https://github.com/LevelUp-Applied-AI/m4-l4-descriptive-analytics-MohannadNassralla/pull/1](#)
   - Skills: Matplotlib, data storytelling
 
 ---
@@ -52,8 +42,8 @@ I am a recent graduate in [Computer Science / Electrical Engineering] from [Univ
 
 **Machine Learning Fundamentals**
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
+- **Telecom Customer Behavior Analytics** —Developed a dual-purpose machine learning system featuring a standardized Logistic Regression pipeline for churn classification with class balancing, alongside a regularized Ridge and Lasso regression analysis to predict monthly service charges.
+  - Repo: [https://github.com/LevelUp-Applied-AI/m5-l5a-regression-eval-MohannadNassralla-1/pull/1](#)
   - Skills: scikit-learn, model evaluation
 
 **Natural Language Processing**
@@ -113,6 +103,6 @@ I am a recent graduate in [Computer Science / Electrical Engineering] from [Univ
 
 ## Contact
 
-- **GitHub:** [your-github-username](https://github.com/your-github-username)
-- **LinkedIn:** [your-linkedin-profile](https://linkedin.com/in/your-profile)
-- **Email:** your.email@example.com
+- **GitHub:** [MohannadNassralla](https://github.com/MohannadNassralla)
+- **LinkedIn:** [Mohannad Nassralla](https://www.linkedin.com/in/mohannad-nassralla-b028a7215/)
+- **Email:** mohannadnassrallah@gmail.com
