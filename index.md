@@ -3,7 +3,7 @@ layout: default
 ---
 
 # Mohannad Nassralla
-<img src="https://github.com/fourseasons.png" alt="Mohannad Nassralla" width="150" style="border-radius: 10px;">
+
 ## About
 
 I am a graduate in Software Engineering from Al-Hussein Bin Talal University in Jordan. I am building expertise in applied AI and ML systems through the AI.SPIRE program. I am most interested in Data Analysis and  data engineering. I have experience  in web development(full stack) in php language. My graduate project E-voting for university 
