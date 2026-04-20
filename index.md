@@ -1,108 +1,270 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohannad Nassralla | ML & Data Engineer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --accent: #00d2ff;
+            --secondary: #3a7bd5;
+            --bg: #0b0e14;
+            --card: #161b22;
+            --text: #e6edf3;
+            --muted: #8b949e;
+            --success: #238636;
+        }
 
-# Mohannad Nassralla
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
 
-## About
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
 
-I am a graduate in Software Engineering from Al-Hussein Bin Talal University in Jordan. I am building expertise in applied AI and ML systems through the AI.SPIRE program. I am most interested in Data Analysis and  data engineering. I have experience  in web development(full stack) in php language. My graduate project E-voting for university 
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 80px 0 40px;
+            border-bottom: 1px solid #30363d;
+        }
 
----
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid var(--accent);
+            padding: 5px;
+            margin-bottom: 20px;
+        }
 
-## Projects
+        h1 { font-size: 2.8rem; letter-spacing: -1px; margin-bottom: 10px; }
+        .title-sub { color: var(--accent); font-family: 'Fira Code', monospace; font-size: 1.1rem; margin-bottom: 25px; }
 
-### Foundations
+        /* Bento Grid Style for Projects */
+        .section-title {
+            font-size: 1.5rem;
+            margin: 60px 0 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-**Data Pipelines & PyTorch Fundamentals**
+        .section-title::after {
+            content: "";
+            height: 1px;
+            background: #30363d;
+            flex-grow: 1;
+        }
 
-- **Data Pipeline** — Built an end-to-end data loading and preprocessing pipeline using pandas, with validation checks and reproducible outputs.
-  - Repo: [https://github.com/LevelUp-Applied-AI/m2-l2-data-pipeline-MohannadNassralla](#)
-  - Skills: Python, pandas, data cleaning, pipeline design
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 20px;
+        }
 
-- **PyTorch Model** — Implemented a neural network training loop in PyTorch, including data loading, forward/backward passes, and evaluation metrics.
-  - Repo: [https://github.com/LevelUp-Applied-AI/m2-i2-pytorch-MohannadNassralla](#)
-  - Skills: PyTorch, tensor operations, training loops, model evaluation
+        .card {
+            background: var(--card);
+            border: 1px solid #30363d;
+            border-radius: 12px;
+            padding: 24px;
+            transition: all 0.3s ease;
+            position: relative;
+        }
 
-**Relational Databases & SQL**
+        .card:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+            background: #1c2128;
+        }
 
-- **Levant Tech Analytics: Relational Database Design & KPI Business Intelligence** — Architected a PostgreSQL analytics suite for a Jordanian tech firm, implementing complex JOINS, Window Functions, and CTEs to extract workforce insights and designing a scalable schema for certification tracking.
-  - Repo: [https://github.com/LevelUp-Applied-AI/m3-l3-sql-analytics-MohannadNassralla](#)
-  - Skills: SQL, PostgreSQL, data modeling
+        .card h3 { margin-bottom: 12px; font-size: 1.25rem; color: #fff; }
+        .card p { color: var(--muted); font-size: 0.95rem; margin-bottom: 20px; }
 
-**Data Visualization & Communication**
+        .tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .tag {
+            background: rgba(0, 210, 255, 0.1);
+            color: var(--accent);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-family: 'Fira Code', monospace;
+        }
 
-- **Academic Performance Analytics** —Performed a comprehensive exploratory data analysis (EDA) on 2,000 university records using Python, utilizing statistical hypothesis testing (T-tests, Chi-square) and data visualization to identify key drivers of student success
-  - Repo: [https://github.com/LevelUp-Applied-AI/m4-l4-descriptive-analytics-MohannadNassralla](#)
-  - Skills: Matplotlib, data storytelling
+        .repo-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 20px;
+            color: var(--text);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
 
----
+        .repo-link:hover { text-decoration: underline; color: var(--accent); }
 
-### Machine Learning & NLP
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
 
-**Machine Learning Fundamentals**
+        .contact-item {
+            background: #1c2128;
+            border: 1px solid #30363d;
+            padding: 15px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: 0.3s;
+        }
 
-- **Telecom Customer Behavior Analytics** —Developed a dual-purpose machine learning system featuring a standardized Logistic Regression pipeline for churn classification with class balancing, alongside a regularized Ridge and Lasso regression analysis to predict monthly service charges.
-  - Repo: [https://github.com/LevelUp-Applied-AI/m5-l5a-regression-eval-MohannadNassralla-1](#)
-  - Skills: scikit-learn, model evaluation
+        .contact-item i { color: var(--accent); font-size: 1.2rem; }
+        .contact-item:hover { border-color: var(--accent); background: #21262d; }
 
-**Natural Language Processing**
+        /* General Badge */
+        .badge {
+            background: #21262d;
+            border: 1px solid #30363d;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+        }
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: spaCy, text preprocessing, NLP pipelines
+        .socials { display: flex; justify-content: center; gap: 20px; margin-bottom: 30px; }
+        .socials a { color: var(--muted); font-size: 1.5rem; transition: 0.3s; }
+        .socials a:hover { color: var(--accent); }
 
-**Deep Learning for NLP**
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            header { padding: 40px 0; }
+        }
+    </style>
+</head>
+<body>
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: PyTorch, Hugging Face, transformers
+<div class="container">
+    <header>
+        <img src="https://github.com/MohannadNassralla.png" alt="Mohannad Nassralla" class="profile-img">
+        <h1>Mohannad Nassralla</h1>
+        <p class="title-sub">Applied AI & ML Systems Engineer</p>
+        <div class="socials">
+            <a href="https://github.com/MohannadNassralla" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/mohannad-nassralla" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:mohannadnassrallah@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p style="max-width: 600px; margin: 0 auto; color: var(--muted);">
+            I am a graduate in Software Engineering from Al-Hussein Bin Talal University in Jordan.
+            I am building expertise in applied AI and ML systems through the AI.SPIRE program.
+            I am most interested in Data Analysis and  data engineering. 
+            I have experience  in web development(full stack) in php language. My graduate project E-voting for university 
+        </p>
+    </header>
 
----
+    <h2 class="section-title"><i class="fas fa-layer-group"></i> Featured Projects</h2>
+    <div class="grid">
+        <div class="card">
+            <h3>Data Pipeline Engine</h3>
+            <p>Built a reproducible preprocessing pipeline using pandas with validation checks for data integrity.</p>
+            <div class="tags">
+                <span class="tag">Python</span>
+                <span class="tag">Pandas</span>
+                <span class="tag">ETL</span>
+            </div>
+            <a href="https://github.com/LevelUp-Applied-AI/m2-l2-data-pipeline-MohannadNassralla" class="repo-link">
+                <i class="fab fa-github"></i> View Repo
+            </a>
+        </div>
 
-### Retrieval & Knowledge Graphs
+        <div class="card">
+            <h3>Telecom Churn System</h3>
+            <p>Advanced ML system using Logistic Regression and Random Forests with calibrated probability outputs.</p>
+            <div class="tags">
+                <span class="tag">Scikit-Learn</span>
+                <span class="tag">Trees</span>
+                <span class="tag">Calibration</span>
+            </div>
+            <a href="https://github.com/LevelUp-Applied-AI/m5-l5a-regression-eval-MohannadNassralla-1" class="repo-link">
+                <i class="fab fa-github"></i> View Repo
+            </a>
+        </div>
 
-**Retrieval-Augmented Generation**
+        <div class="card">
+            <h3>SQL BI Analytics</h3>
+            <p>PostgreSQL suite for workforce insights using JOINS, Window Functions, and complex CTEs.</p>
+            <div class="tags">
+                <span class="tag">SQL</span>
+                <span class="tag">PostgreSQL</span>
+                <span class="tag">Analytics</span>
+            </div>
+            <a href="https://github.com/LevelUp-Applied-AI/m3-l3-sql-analytics-MohannadNassralla" class="repo-link">
+                <i class="fab fa-github"></i> View Repo
+            </a>
+        </div>
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: Weaviate, RAG pipelines, embeddings
-  - [Read more](projects/sample-project.md) *(optional -- use for projects complex enough to warrant a detail page)*
+        <div class="card">
+            <h3>PyTorch Foundations</h3>
+            <p>Neural network implementation focusing on training loops and forward/backward pass logic.</p>
+            <div class="tags">
+                <span class="tag">PyTorch</span>
+                <span class="tag">Deep Learning</span>
+            </div>
+            <a href="https://github.com/LevelUp-Applied-AI/m2-i2-pytorch-MohannadNassralla" class="repo-link">
+                <i class="fab fa-github"></i> View Repo
+            </a>
+        </div>
+    </div>
 
-**Knowledge Graphs**
+    <h2 class="section-title"><i class="fas fa-id-card"></i> Get In Touch</h2>
+    <div class="contact-grid">
+        <a href="mailto:mohannadnassrallah@gmail.com" class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+                <p style="font-size: 0.8rem; color: var(--muted);">Email</p>
+                <p style="font-size: 0.9rem;">mohannadnassrallah@gmail.com</p>
+            </div>
+        </a>
+        <a href="tel:+962785828352" class="contact-item">
+            <i class="fas fa-phone"></i>
+            <div>
+                <p style="font-size: 0.8rem; color: var(--muted);">Phone</p>
+                <p style="font-size: 0.9rem;">+962 785828352</p>
+            </div>
+        </a>
+        <a href="https://www.linkedin.com/in/mohannad-nassralla" class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+                <p style="font-size: 0.8rem; color: var(--muted);">LinkedIn</p>
+                <p style="font-size: 0.9rem;">Mohannad Nassralla</p>
+            </div>
+        </a>
+    </div>
 
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: Triple stores, SPARQL, knowledge representation
+    <h2 class="section-title"><i class="fas fa-university"></i> Education</h2>
+    <div class="badge">
+        <h4 style="color: var(--accent);">B.Sc. Software Engineering</h4>
+        <p>Al-Hussein Bin Talal University, Jordan</p>
+        <p style="font-size: 0.85rem; color: var(--muted); margin-top: 5px;">
+            Key Project: Full-stack E-voting system for university (PHP/MySQL).
+        </p>
+    </div>
 
----
+    <footer style="text-align: center; margin-top: 80px; padding-bottom: 40px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid #30363d; padding-top: 20px;">
+        <p>&copy; 2026 Mohannad Nassralla | Built for Data & AI Engineering</p>
+    </footer>
+</div>
 
-### Deployment
-
-**API Development & Containerization**
-
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: FastAPI, Docker, deployment
-
-**Monitoring & Production Systems**
-
-- **Project Name** — One sentence describing what you built.
-  - Repo: [link](#)
-  - Skills: Monitoring, logging, production reliability
-
----
-
-### Capstone
-
-- **Project Name** — One sentence describing your capstone.
-  - Repo: [link](#)
-  - Skills: Full-stack AI/ML system
-
----
-
-## Contact
-
-- **GitHub:** [MohannadNassralla](https://github.com/MohannadNassralla)
-- **LinkedIn:** [Mohannad Nassralla](https://www.linkedin.com/in/mohannad-nassralla-b028a7215/)
-- **Email:** mohannadnassrallah@gmail.com
+</body>
+</html>
